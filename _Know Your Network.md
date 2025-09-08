@@ -1,5 +1,5 @@
 
-<!-- Your monitor number = #$31T# -->
+<!-- Your monitor number =  -->
 
 
 # 👋 Welcome to Rivan
