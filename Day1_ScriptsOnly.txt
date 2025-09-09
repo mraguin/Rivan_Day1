@@ -1,7 +1,7 @@
 FIND AND REPLACE THE FOLLOWING - From # to #
 
 ! Monitor Num:      31
-! Cam6 Mac Add:     #camera6macadd#
+! Cam6 Mac Add:     001a.0709.c26b
 ! Cam8 Mac Add:     #camera8macadd#
 ! Ephone 1 Mac: 	#ephone1macadd#
 ! Ephone 2 Mac: 	#ephone2macadd#
@@ -173,7 +173,7 @@ conf t
  ip routing
  ip dhcp pool CAMERA6
   host 10.31.50.6 255.255.255.0
-  client-identifier #camera6macadd#
+  client-identifier 001a.0709.c26b
  ip dhcp pool CAMERA8
   host 10.31.50.8 255.255.255.0
   client-identifier #camera8macadd#
@@ -352,6 +352,14 @@ conf t
   codec g711ULAW
  dial-peer voice 82 Voip
   destination-pattern 82..
+  session target ipv4:10.82.100.8
+  codec g711ULAW
+dial-peer voice 91 Voip
+  destination-pattern 91..
+  session target ipv4:10.82.100.8
+  codec g711ULAW
+dial-peer voice 92 Voip
+  destination-pattern 92..
   session target ipv4:10.82.100.8
   codec g711ULAW
  end
@@ -583,4 +591,5 @@ conf t
 conf t
  class-map voip
   match ip dscp  ?
+
 
